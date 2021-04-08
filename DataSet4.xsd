@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet4" targetNamespace="http://tempuri.org/DataSet4.xsd" xmlns:mstns="http://tempuri.org/DataSet4.xsd" xmlns="http://tempuri.org/DataSet4.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.Version3.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString1" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString1 (Settings)" PropertyReference="ApplicationSettings.Version3.Properties.Settings.GlobalReference.Default.ConnectionString1" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="releasesTableAdapter" GeneratorDataComponentClassName="releasesTableAdapter" Name="releases" UserDataComponentName="releasesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString1 (Settings)" DbObjectName="MIMDIST.dbo.m_app_po_release" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     row_id, vendor_no, po_no, part_no, location, line_status, part_type, release_date, quantity, received, status, confirm_date, confirmed, lb_tracking, conv_factor, 
+                      prev_qty, po_key, Expr1, due_date, ord_line, po_line, receipt_batch_no, m_ship_method, m_factory_date, m_ship_confirm, m_tracking, carrier, description, quarter, 
+                      diff, revision, ord_mult, default_carrier, mfg_lt, fob_at, ship_meth_at, fob_nl, ship_meth_nl, fob_sg, ship_meth_sg, m_quote_price, FOB, Ship_meth, 
+                      m_confirmed_date, warning,release_notes
+FROM         dbo.m_app_po_release</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="po_no" DataSetColumn="po_no" />
+              <Mapping SourceColumn="part_no" DataSetColumn="part_no" />
+              <Mapping SourceColumn="location" DataSetColumn="location" />
+              <Mapping SourceColumn="part_type" DataSetColumn="part_type" />
+              <Mapping SourceColumn="release_date" DataSetColumn="release_date" />
+              <Mapping SourceColumn="received" DataSetColumn="received" />
+              <Mapping SourceColumn="status" DataSetColumn="status" />
+              <Mapping SourceColumn="confirm_date" DataSetColumn="confirm_date" />
+              <Mapping SourceColumn="confirmed" DataSetColumn="confirmed" />
+              <Mapping SourceColumn="lb_tracking" DataSetColumn="lb_tracking" />
+              <Mapping SourceColumn="conv_factor" DataSetColumn="conv_factor" />
+              <Mapping SourceColumn="prev_qty" DataSetColumn="prev_qty" />
+              <Mapping SourceColumn="po_key" DataSetColumn="po_key" />
+              <Mapping SourceColumn="row_id" DataSetColumn="row_id" />
+              <Mapping SourceColumn="due_date" DataSetColumn="due_date" />
+              <Mapping SourceColumn="ord_line" DataSetColumn="ord_line" />
+              <Mapping SourceColumn="po_line" DataSetColumn="po_line" />
+              <Mapping SourceColumn="receipt_batch_no" DataSetColumn="receipt_batch_no" />
+              <Mapping SourceColumn="m_ship_method" DataSetColumn="m_ship_method" />
+              <Mapping SourceColumn="m_confirmed_date" DataSetColumn="m_confirmed_date" />
+              <Mapping SourceColumn="m_factory_date" DataSetColumn="m_factory_date" />
+              <Mapping SourceColumn="m_ship_confirm" DataSetColumn="m_ship_confirm" />
+              <Mapping SourceColumn="m_tracking" DataSetColumn="m_tracking" />
+              <Mapping SourceColumn="carrier" DataSetColumn="carrier" />
+              <Mapping SourceColumn="vendor_no" DataSetColumn="vendor_no" />
+              <Mapping SourceColumn="line_status" DataSetColumn="line_status" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="description" DataSetColumn="description" />
+              <Mapping SourceColumn="quarter" DataSetColumn="quarter" />
+              <Mapping SourceColumn="diff" DataSetColumn="diff" />
+              <Mapping SourceColumn="revision" DataSetColumn="revision" />
+              <Mapping SourceColumn="ord_mult" DataSetColumn="ord_mult" />
+              <Mapping SourceColumn="default_carrier" DataSetColumn="default_carrier" />
+              <Mapping SourceColumn="mfg_lt" DataSetColumn="mfg_lt" />
+              <Mapping SourceColumn="fob_at" DataSetColumn="fob_at" />
+              <Mapping SourceColumn="ship_meth_at" DataSetColumn="ship_meth_at" />
+              <Mapping SourceColumn="fob_nl" DataSetColumn="fob_nl" />
+              <Mapping SourceColumn="ship_meth_nl" DataSetColumn="ship_meth_nl" />
+              <Mapping SourceColumn="fob_sg" DataSetColumn="fob_sg" />
+              <Mapping SourceColumn="ship_meth_sg" DataSetColumn="ship_meth_sg" />
+              <Mapping SourceColumn="m_quote_price" DataSetColumn="m_quote_price" />
+              <Mapping SourceColumn="FOB" DataSetColumn="FOB" />
+              <Mapping SourceColumn="Ship_meth" DataSetColumn="Ship_meth" />
+              <Mapping SourceColumn="warning" DataSetColumn="warning" />
+              <Mapping SourceColumn="quantity" DataSetColumn="quantity1" />
+              <Mapping SourceColumn="release_notes" DataSetColumn="release_notes" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClass

@@ -1,0 +1,1729 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16BFB6E0-488B-4B36-A68C-4EDE63E67F5F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Version3</RootNamespace>
+    <AssemblyName>PlanningExecutionNew</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>\\mvreporting\PlanningExecutionNew\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\mvreporting\PlanningExecutionNew\</InstallUrl>
+    <UpdateUrl>\\mvreporting\PlanningExecutionNew\</UpdateUrl>
+    <PublisherName>Material In Motion, Inc</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>94</ApplicationRevision>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>B5F9333573B332182314F1AC0951F398A7A36EA4</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Version3_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Version3.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Atalasoft.dotImage.Barcoding.Writing, Version=10.4.0.60021, Culture=neutral, PublicKeyToken=2b02b46f7326f73b, processorArchitecture=MSIL" />
+    <Reference Include="Atalasoft.Shared, Version=10.4.0.60021, Culture=neutral, PublicKeyToken=2b02b46f7326f73b" />
+    <Reference Include="BouncyCastle.Crypto, Version=1.7.4137.9688, Culture=neutral, PublicKeyToken=a4292a325f69b123, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.1.7.0\lib\Net40-Client\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine">
+      <HintPath>C:\Program Files (x86)\Common Files\Business Objects\2.7\Managed\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared">
+      <HintPath>C:\Program Files (x86)\Common Files\Business Objects\2.7\Managed\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Localization, Version=9.20.20153.0, Culture=neutral, PublicKeyToken=327c3516b1b18457" />
+    <Reference Include="FarPoint.Win, Version=9.35.20153.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GrapeCity\Spread Studio 9\Windows Forms\v9.35.20153.0\bin\FarPoint.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="FarPoint.Win.Spread, Version=9.35.20153.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\GrapeCity\Spread Studio 9\Windows Forms\v9.35.20153.0\bin\FarPoint.Win.Spread.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis, Version=1.11.1.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.1.11.1\lib\net45\Google.Apis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.11.1.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Auth.1.11.1\lib\net45\Google.Apis.Auth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.11.1.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Auth.1.11.1\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.11.1.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Core.1.11.1\lib\net45\Google.Apis.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis.Drive.v3, Version=1.12.0.480, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.Drive.v3.1.12.0.480\lib\portable-net45+netcore45+wpa81+wp8\Google.Apis.Drive.v3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.11.1.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Apis.1.11.1\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GrapeCity.Win.PluginInputMan, Version=9.35.20153.0, Culture=neutral, PublicKeyToken=327c3516b1b18457, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Documents.Core.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Documents.Excel.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Documents.IO.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Documents.Reports.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Documents.TextDocument.CSharp.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Documents.TextDocument.TSql.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Documents.TextDocument.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Documents.TextDocument.VisualBasic.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Documents.Word.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Math.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Services.Schedules.WcfConnectorService.v13.2, Version=13.2.20132.2141, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Shared.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Undo.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Web.jQuery.v13.2, Version=13.2.20132.2109, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Web.v13.2, Version=13.2.20132.2109, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.WebUI.Documents.Core.v13.2, Version=13.2.20132.2109, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.WebUI.Documents.Excel.v13.2, Version=13.2.20132.2109, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.WebUI.Documents.IO.v13.2, Version=13.2.20132.2109, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.WebUI.Documents.Reports.v13.2, Version=13.2.20132.2109, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.WebUI.Documents.Word.v13.2, Version=13.2.20132.2109, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.WebUI.Misc.v13.2, Version=13.2.20132.2109, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.WebUI.Shared.v13.2, Version=13.2.20132.2109, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.WebUI.UltraWebCalcManager.v13.2, Version=13.2.20132.2109, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.WebUI.UltraWebChart.v13.2, Version=13.2.20132.2109, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.WebUI.UltraWebGauge.v13.2, Version=13.2.20132.2109, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.WebUI.WebDataInput.v13.2, Version=13.2.20132.2109, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.WebUI.WebHtmlEditor.v13.2, Version=13.2.20132.2109, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.WebUI.WebResizingExtender.v13.2, Version=13.2.20132.2109, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.WebUI.WebSchedule.v13.2, Version=13.2.20132.2109, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.WebUI.WebScheduleDataProvider.v13.2, Version=13.2.20132.2109, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.WebUI.WebSpellChecker.v13.2, Version=13.2.20132.2109, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.AppStylistSupport.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.Misc.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.SupportDialogs.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraChart.v13.2.Design, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraGauge.v13.2.Design, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinCalcManager.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinCalcManager.v13.2.FormulaBuilder, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinChart.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinDataSource.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinDock.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinExplorerBar.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinFormattedText.WordWriter.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinGanttView.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinGauge.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinGrid.DocumentExport.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinGrid.ExcelExport.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinGrid.WordWriter.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinInkProvider.Ink17.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinListBar.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinListView.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinLiveTileView.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinMaskedEdit.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinPrintPreviewDialog.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinRadialMenu.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinReportViewer.v13.2, Version=13.2.20132.1040, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinReportViewer.v13.2.Design, Version=13.2.20132.1040, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinSchedule.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinSpellChecker.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinStatusBar.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinTabbedMdi.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinTree.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.v13.2, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.v13.2.Design, Version=13.2.20132.2054, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Outlook">
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 10.0\Visual Studio Tools for Office\PIA\Office14\Microsoft.Office.Interop.Outlook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word">
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Visual Studio Tools for Office\PIA\Office14\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Word, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.SQLServer.ManagedDTS">
+      <HintPath>C:\Program Files (x86)\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SQLServer.ManagedDTS.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Microsoft.VisualBasic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\VBPowerPacks\v10.0\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Zlib.Portable, Version=1.11.0.0, Culture=neutral, PublicKeyToken=431cba815f6a8b5b, processorArchitecture=MSIL">
+      <HintPath>packages\Zlib.Portable.Signed.1.11.0\lib\portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid\Zlib.Portable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlternatePartPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlternatePartPopup.Designer.cs">
+      <DependentUpon>AlternatePartPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssignedPart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssignedPart.Designer.cs">
+      <DependentUpon>AssignedPart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bacon_BOM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bacon_BOM.Designer.cs">
+      <DependentUpon>Bacon_BOM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BTS Netgear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BTS Netgear.Designer.cs">
+      <DependentUpon>BTS Netgear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BTS.Designer.cs">
+      <DependentUpon>BTS.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="BTSErrorLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BTSErrorLog.Designer.cs">
+      <DependentUpon>BTSErrorLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BTSForAC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BTSForAC.Designer.cs">
+      <DependentUpon>BTSForAC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BTSForDecom2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BTSForDecom2.Designer.cs">
+      <DependentUpon>BTSForDecom2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BTSForMR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BTSForMR.Designer.cs">
+      <DependentUpon>BTSForMR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BTSForMT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BTSForMT.Designer.cs">
+      <DependentUpon>BTSForMT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManualAdjustment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManualAdjustment.Designer.cs">
+      <DependentUpon>ManualAdjustment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewRepeaterTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewRepeaterTest.Designer.cs">
+      <DependentUpon>NewRepeaterTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CopyVendorSplit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CopyVendorSplit.Designer.cs">
+      <DependentUpon>CopyVendorSplit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VanillaCommit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VanillaCommit.Designer.cs">
+      <DependentUpon>VanillaCommit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuildStatusReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuildStatusReport.Designer.cs">
+      <DependentUpon>BuildStatusReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BOLReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BOLReport.Designer.cs">
+      <DependentUpon>BOLReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BTSNewBuildForAC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BTSNewBuildForAC.Designer.cs">
+      <DependentUpon>BTSNewBuildForAC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BTSForPOReceipt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BTSForPOReceipt.Designer.cs">
+      <DependentUpon>BTSForPOReceipt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BTSForADJ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BTSForADJ.Designer.cs">
+      <DependentUpon>BTSForADJ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CSVUtlity.cs" />
+    <Compile Include="ExecuteDisposition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExecuteDisposition.Designer.cs">
+      <DependentUpon>ExecuteDisposition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportInvoice.Designer.cs">
+      <DependentUpon>ImportInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntegrationMTRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntegrationMTRequest.Designer.cs">
+      <DependentUpon>IntegrationMTRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <DependentUpon>DataSet1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet11.Designer.cs" />
+    <Compile Include="DataSet2.Designer.cs">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="DataSet3.Designer.cs">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="DataSet4.cs">
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet4.Designer.cs">
+      <DependentUpon>DataSet4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FirstArticleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirstArticleForm.Designer.cs">
+      <DependentUpon>FirstArticleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forecast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forecast.Designer.cs">
+      <DependentUpon>Forecast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GIGForecast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GIGForecast.Designer.cs">
+      <DependentUpon>GIGForecast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoogleAPIClass.cs" />
+    <Compile Include="Kanban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kanban.Designer.cs">
+      <DependentUpon>Kanban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KanbanLayoutSecition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KanbanLayoutSecition.Designer.cs">
+      <DependentUpon>KanbanLayoutSecition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KanbanPartAssign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KanbanPartAssign.Designer.cs">
+      <DependentUpon>KanbanPartAssign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KB_PopupOrderAssign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KB_PopupOrderAssign.Designer.cs">
+      <DependentUpon>KB_PopupOrderAssign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kb_PopupPartAssign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kb_PopupPartAssign.Designer.cs">
+      <DependentUpon>kb_PopupPartAssign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListItem1.cs" />
+    <Compile Include="MRP Process.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MRP Process.Designer.cs">
+      <DependentUpon>MRP Process.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewBuildPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewBuildPlan.Designer.cs">
+      <DependentUpon>NewBuildPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NotePad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NotePad.Designer.cs">
+      <DependentUpon>NotePad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NPI_MRP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NPI_MRP.Designer.cs">
+      <DependentUpon>NPI_MRP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Packaging_BOM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Packaging_BOM.Designer.cs">
+      <DependentUpon>Packaging_BOM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartMaintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartMaintenance.Designer.cs">
+      <DependentUpon>PartMaintenance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartSearch.Designer.cs">
+      <DependentUpon>PartSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlanningMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanningMenu.Designer.cs">
+      <DependentUpon>PlanningMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuoteCopyQuarter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuoteCopyQuarter.Designer.cs">
+      <DependentUpon>QuoteCopyQuarter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RackDeliveryPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RackDeliveryPlan.Designer.cs">
+      <DependentUpon>RackDeliveryPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegionOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegionOption.Designer.cs">
+      <DependentUpon>RegionOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepeaterTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepeaterTest.Designer.cs">
+      <DependentUpon>RepeaterTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RepPartList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RepPartList.Designer.cs">
+      <DependentUpon>RepPartList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateInvoice.Designer.cs">
+      <DependentUpon>UpdateInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VendorCommitApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VendorCommitApp.Designer.cs">
+      <DependentUpon>VendorCommitApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VendorSKU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VendorSKU.Designer.cs">
+      <DependentUpon>VendorSKU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VendorSplit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VendorSplit.Designer.cs">
+      <DependentUpon>VendorSplit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VendorTrackingNum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VendorTrackingNum.Designer.cs">
+      <DependentUpon>VendorTrackingNum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor_Protal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendor_Protal.Designer.cs">
+      <DependentUpon>Vendor_Protal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WB_BTSForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WB_BTSForm.Designer.cs">
+      <DependentUpon>WB_BTSForm.cs</DependentUpon>
+    </Compile>
+    <Content Include="Image\add.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\delete2.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\edit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\notepad_blank.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\notepad_filled.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\notepad_wood.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\notes-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\notes-icon1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Image\save.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="AlternatePartPopup.resx">
+      <DependentUpon>AlternatePartPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssignedPart.resx">
+      <DependentUpon>AssignedPart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bacon_BOM.resx">
+      <DependentUpon>Bacon_BOM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BTS Netgear.resx">
+      <DependentUpon>BTS Netgear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BTSErrorLog.resx">
+      <DependentUpon>BTSErrorLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BTSForAC.resx">
+      <DependentUpon>BTSForAC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BTSForDecom2.resx">
+      <DependentUpon>BTSForDecom2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BTSForMR.resx">
+      <DependentUpon>BTSForMR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BTSForMT.resx">
+      <DependentUpon>BTSForMT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManualAdjustment.resx">
+      <DependentUpon>ManualAdjustment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewRepeaterTest.resx">
+      <DependentUpon>NewRepeaterTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CopyVendorSplit.resx">
+      <DependentUpon>CopyVendorSplit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VanillaCommit.resx">
+      <DependentUpon>VanillaCommit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuildStatusReport.resx">
+      <DependentUpon>BuildStatusReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BOLReport.resx">
+      <DependentUpon>BOLReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BTSNewBuildForAC.resx">
+      <DependentUpon>BTSNewBuildForAC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BTSForPOReceipt.resx">
+      <DependentUpon>BTSForPOReceipt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BTSForADJ.resx">
+      <DependentUpon>BTSForADJ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExecuteDisposition.resx">
+      <DependentUpon>ExecuteDisposition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportInvoice.resx">
+      <DependentUpon>ImportInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntegrationMTRequest.resx">
+      <DependentUpon>IntegrationMTRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirstArticleForm.resx">
+      <DependentUpon>FirstArticleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forecast.resx">
+      <DependentUpon>Forecast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GIGForecast.resx">
+      <DependentUpon>GIGForecast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kanban.resx">
+      <DependentUpon>Kanban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KanbanLayoutSecition.resx">
+      <DependentUpon>KanbanLayoutSecition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KanbanPartAssign.resx">
+      <DependentUpon>KanbanPartAssign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KB_PopupOrderAssign.resx">
+      <DependentUpon>KB_PopupOrderAssign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kb_PopupPartAssign.resx">
+      <DependentUpon>kb_PopupPartAssign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MRP Process.resx">
+      <DependentUpon>MRP Process.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewBuildPlan.resx">
+      <DependentUpon>NewBuildPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NotePad.resx">
+      <DependentUpon>NotePad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NPI_MRP.resx">
+      <DependentUpon>NPI_MRP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Packaging_BOM.resx">
+      <DependentUpon>Packaging_BOM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartMaintenance.resx">
+      <DependentUpon>PartMaintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartSearch.resx">
+      <DependentUpon>PartSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanningMenu.resx">
+      <DependentUpon>PlanningMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Content Include="client_secret.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="QuoteCopyQuarter.resx">
+      <DependentUpon>QuoteCopyQuarter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RackDeliveryPlan.resx">
+      <DependentUpon>RackDeliveryPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegionOption.resx">
+      <DependentUpon>RegionOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepeaterTest.resx">
+      <DependentUpon>RepeaterTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RepPartList.resx">
+      <DependentUpon>RepPartList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateInvoice.resx">
+      <DependentUpon>UpdateInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VendorCommitApp.resx">
+      <DependentUpon>VendorCommitApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VendorSKU.resx">
+      <DependentUpon>VendorSKU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VendorSplit.resx">
+      <DependentUpon>VendorSplit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VendorTrackingNum.resx">
+      <DependentUpon>VendorTrackingNum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vendor_Protal.resx">
+      <DependentUpon>Vendor_Protal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WB_BTSForm.resx">
+      <DependentUpon>WB_BTSForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\Debug\Templates\Build ID 4 Week Summary template.xlsx" />
+    <Content Include="bin\Debug\Templates\currentRackDeliveryPlan.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="bin\Debug\Templates\Demand Forecast Template.xlsx" />
+    <None Include="bin\Debug\Templates\First Article Sheet Template.xlsx" />
+    <None Include="bin\Debug\Templates\Kanban Update for Shared Doc.xlsx" />
+    <None Include="bin\Debug\Templates\MIM_Menlo Demand TrackerTemplate.xlsx" />
+    <None Include="bin\Debug\Templates\NPI_MRP_TEMPLATE.xlsx" />
+    <None Include="bin\Debug\Templates\Shared Doc Costed BOM Template.xlsx" />
+    <None Include="bin\Debug\Templates\Vendor Packaging InformationDelete.xlsx" />
+    <None Include="bin\Debug\Templates\Vendor Portal Template.xlsx" />
+    <None Include="bin\Debug\Templates\Vendor Quote Confirmation.xlsx" />
+    <None Include="bin\Debug\Templates\Vendor RFQ Template.xlsx" />
+    <None Include="bin\Debug\Templates\VendorSheet.xlsx" />
+    <Content Include="currentRackDeliveryPlan.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="BTS.xsc">
+      <DependentUpon>BTS.xsd</DependentUpon>
+    </None>
+    <None Include="BTS.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BTS.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="BTS.xss">
+      <DependentUpon>BTS.xsd</DependentUpon>
+    </None>
+    <Content Include="Copy of client_secret.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd" />
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsc">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet3.xss">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet4.xsc">
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet4.xsd" />
+    <None Include="DataSet4.xss">
+      <DependentUpon>DataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Content Include="Templates\Demand Forecast Template.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\First Article Sheet Template.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Kanban Update for Shared Doc.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\MIM_Menlo Demand TrackerTemplate.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\NPI_MRP_TEMPLATE.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Shared Doc Costed BOM Template.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Vendor Packaging InformationDelete.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Vendor Portal Template.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Vendor Quote Confirmation.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\Vendor RFQ Template.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Templates\VendorSheet.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="VanillaKanBanParts.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="CrystalDecisions.CrystalReports.Engine">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Enterprise.Framework">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Enterprise.InfoStore">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Enterprise.PluginManager">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.KeyCode">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ClientDoc">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommLayer">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonControls">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Controllers">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CubeDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataSetConversion">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ObjectFactory">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ReportDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.XmlSerialize">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Shared">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="EnvDTE">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="FarPoint.CalcEngine">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="FarPoint.Excel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="FarPoint.Localization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="FarPoint.PDF">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="FarPoint.PluginCalendar.WinForms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="FarPoint.Win">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="FarPoint.Win.Chart">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="FarPoint.Win.Spread">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="GrapeCity.Win.PluginInputMan">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics4.Services.Schedules.WcfConnectorService.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics4.Web.jQuery.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics4.Web.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics4.WebUI.Documents.Core.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics4.WebUI.Documents.Excel.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics4.WebUI.Documents.IO.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics4.WebUI.Documents.Reports.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics4.WebUI.Documents.Word.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics4.WebUI.Misc.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics4.WebUI.Shared.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics4.WebUI.UltraWebCalcManager.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics4.WebUI.UltraWebChart.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics4.WebUI.UltraWebGauge.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics4.WebUI.WebDataInput.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics4.WebUI.WebHtmlEditor.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics4.WebUI.WebResizingExtender.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics4.WebUI.WebSchedule.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics4.WebUI.WebScheduleDataProvider.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics4.WebUI.WebSpellChecker.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics4.Win.UltraWinReportViewer.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Infragistics4.Win.UltraWinReportViewer.v13.2.Design">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="InfragisticsWPF4.Controls.Reports.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="InfragisticsWPF4.Controls.Reports.v13.2.Design.Shared">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="InfragisticsWPF4.Models.Data.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="InfragisticsWPF4.Models.Presentation.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="InfragisticsWPF4.Reports.Client.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="InfragisticsWPF4.Reports.Controls.Charts.XamDataChart.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="InfragisticsWPF4.Reports.Controls.Common.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="InfragisticsWPF4.Reports.Controls.DataVisualization.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="InfragisticsWPF4.Reports.Excel.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="InfragisticsWPF4.Reports.Pdf.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="InfragisticsWPF4.Reports.v13.2">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Ink">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.MSXML">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Office.Interop.Outlook">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Office.Interop.Word">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Diagnostics.STrace">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.DtsMsg">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.DTSPipelineWrap">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.ManagedDTS">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Msxml6_interop">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.PipelineHost">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.Vbe.Interop">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualBasic.PowerPacks.Vs">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.OLE.Interop">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.ProjectAggregator">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Settings">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Shell.10.0">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Shell.Immutable.10.0">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Shell.Interop">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Shell.Interop.8.0">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.Shell.Interop.9.0">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.TextManager.Interop">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.TextManager.Interop.8.0">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.VisualStudio.VSHelp">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="office">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="stdole">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

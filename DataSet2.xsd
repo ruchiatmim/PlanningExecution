@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet2" targetNamespace="http://tempuri.org/DataSet2.xsd" xmlns:mstns="http://tempuri.org/DataSet2.xsd" xmlns="http://tempuri.org/DataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.Version3.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="m_pe_maintain_lead_timeTableAdapter" GeneratorDataComponentClassName="m_pe_maintain_lead_timeTableAdapter" Name="m_pe_maintain_lead_time" UserDataComponentName="m_pe_maintain_lead_timeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="MIMDIST.dbo.m_pe_maintain_lead_time" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT commodity, manufacturer, owner, part_num, part_description, factory_lead_time, fob_at, ship_meth_at, transit_lt_at, fob_nl, ship_meth_nl, transit_lt_nl, fob_sg, ship_meth_sg, transit_lt_sg FROM dbo.m_pe_maintain_lead_time</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="commodity" DataSetColumn="commodity" />
+              <Mapping SourceColumn="manufacturer" DataSetColumn="manufacturer" />
+              <Mapping SourceColumn="owner" DataSetColumn="owner" />
+              <Mapping SourceColumn="part_num" DataSetColumn="part_num" />
+              <Mapping SourceColumn="part_description" DataSetColumn="part_description" />
+              <Mapping SourceColumn="factory_lead_time" DataSetColumn="factory_lead_time" />
+              <Mapping SourceColumn="fob_at" DataSetColumn="fob_at" />
+              <Mapping SourceColumn="ship_meth_at" DataSetColumn="ship_meth_at" />
+              <Mapping SourceColumn="transit_lt_at" DataSetColumn="transit_lt_at" />
+              <Mapping SourceColumn="fob_nl" DataSetColumn="fob_nl" />
+              <Mapping SourceColumn="ship_meth_nl" DataSetColumn="ship_meth_nl" />
+              <Mapping SourceColumn="transit_lt_nl" DataSetColumn="transit_lt_nl" />
+              <Mapping SourceColumn="fob_sg" DataSetColumn="fob_sg" />
+              <Mapping SourceColumn="ship_meth_sg" DataSetColumn="ship_meth_sg" />
+              <Mapping SourceColumn="transit_lt_sg" DataSetColumn="transit_lt_sg" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataSet2" msprop:Generator_UserDSName="DataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="m_pe_maintain_lead_time" msprop:Generator_TableClassName="m_pe_maintain_lead_timeDataTable" msprop:Generator_TableVarName="tablem_pe_maintain_lead_time" msprop:Generator_RowChangedName="m_pe_maintain_lead_timeRowChanged" msprop:Generator_TablePropName="m_pe_maintain_lead_time" msprop:Generator_RowDeletingName="m_pe_maintain_lead_timeRowDeleting" msprop:Generator_RowChangingName="m_pe_maintain_lead_timeRowChanging" msprop:Generator_RowEvHandlerName="m_pe_maintain_lead_timeRowChangeEventHandler" msprop:Generator_RowDeletedName="m_pe_maintain_lead_timeRowDeleted" msprop:Generator_RowClassName="m_pe_maintain_lead_timeRow" msprop:Generator_UserTableName="m_pe_maintain_lead_time" msprop:Generator_RowEvArgName="m_pe_maintain_lead_timeRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="commodity" msprop:Generator_ColumnVarNameInTable="columncommodity" msprop:Generator_ColumnPropNameInRow="commodity" msprop:Generator_ColumnPropNameInTable="commodityColumn" msprop:Generator_UserColumnName="commodity">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="manufacturer" msprop:Generator_ColumnVarNameInTable="columnmanufacturer" msprop:Generator_ColumnPropNameInRow="manufacturer" msprop:Generator_ColumnPropNameInTable="manufacturerColumn" msprop:Generator_UserColumnName="manufacturer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="owner" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnowner" msprop:Generator_ColumnPropNameInRow="owner" msprop:Generator_ColumnPropNameInTable="ownerColumn" msprop:Generator_UserColumnName="owner" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="part_num" msprop:Generator_ColumnVarNameInTable="columnpart_num" msprop:Generator_ColumnPropNameInRow="part_num" msprop:Generator_ColumnPropNameInTable="part_numColumn" msprop:Generator_UserColumnName="part_num" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="part_description" msprop:Generator_ColumnVarNameInTable="columnpart_description" msprop:Generator_ColumnPropNameInRow="part_description" msprop:Generator_ColumnPropNameInTable="part_descriptionColumn" msprop:Generator_UserColumnName="part_description" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="factory_lead_time" msprop:Generator_ColumnVarNameInTable="columnfactory_lead_time" msprop:Generator_ColumnPropNameInRow="factory_lead_time" msprop:Generator_ColumnPropNameInTable="factory_lead_timeColumn" msprop:Generator_UserColumnName="factory_lead_time" type="xs:decimal" minOccurs="0" />
+              <xs:element name="fob_at" msprop:Generator_ColumnVarNameInTable="columnfob_at" msprop:Generator_ColumnPropNameInRow="fob_at" msprop:Generator_ColumnPropNameInTable="fob_atColumn" msprop:Generator_UserColumnName="fob_at" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ship_meth_at" msprop:Generator_ColumnVarNameInTable="columnship_meth_at" msprop:Generator_ColumnPropNameInRow="ship_meth_at" msprop:Generator_ColumnPropNameInTable="ship_meth_atColumn" msprop:Generator_UserColumnName="ship_meth_at" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="transit_lt_at" msprop:Generator_ColumnVarNameInTable="columntransit_lt_at" msprop:Generator_ColumnPropNameInRow="transit_lt_at" msprop:Generator_ColumnPropNameInTable="transit_lt_atColumn" msprop:Generator_UserColumnName="transit_lt_at" type="xs:decimal" minOccurs="0" />
+              <xs:element name="fob_nl" msprop:Generator_ColumnVarNameInTable="columnfob_nl" msprop:Generator_ColumnPropNameInRow="fob_nl" msprop:Generator_ColumnPropNameInTable="fob_nlColumn" msprop:Generator_UserColumnName="fob_nl" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ship_meth_nl" msprop:Generator_ColumnVarNameInTable="columnship_meth_nl" msprop:Generator_ColumnPropNameInRow="ship_meth_nl" msprop:Generator_ColumnPropNameInTable="ship_meth_nlColumn" msprop:Generator_UserColumnName="ship_meth_nl" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="transit_lt_nl" msprop:Generator_ColumnVarNameInTable="columntransit_lt_nl" msprop:Generator_ColumnPropNameInRow="transit_lt_nl" msprop:Generator_ColumnPropNameInTable="transit_lt_nlColumn" msprop:Generator_UserColumnName="transit_lt_nl" type="xs:decimal" minOccurs="0" />
+              <xs:element name="fob_sg" msprop:Generator_ColumnVarNameInTable="columnfob_sg" msprop:Generator_ColumnPropNameInRow="fob_sg" msprop:Generator_ColumnPropNameInTable="fob_sgColumn" msprop:Generator_UserColumnName="fob_sg" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ship_meth_sg" msprop:Generator_ColumnVarNameInTable="columnship_meth_sg" msprop:Generator_ColumnPropNameInRow="ship_meth_sg" msprop:Generator_ColumnPropNameInTable="ship_meth_sgColumn" msprop:Generator_UserColumnName="ship_meth_sg" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="transit_lt_sg" msprop:Generator_ColumnVarNameInTable="columntransit_lt_sg" msprop:Generator_ColumnPropNameInRow="transit_lt_sg" msprop:Generator_ColumnPropNameInTable="transit_lt_sgColumn" msprop:Generator_UserColumnName="transit_lt_sg" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
